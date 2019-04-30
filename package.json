@@ -1,0 +1,22 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "sass folder",
+  "main": "index.js",
+  "scripts": {
+    "test": "hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amberlovescats14/Sass_Scss_first.git"
+  },
+  "author": "amber jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amberlovescats14/Sass_Scss_first/issues"
+  },
+  "homepage": "https://github.com/amberlovescats14/Sass_Scss_first#readme",
+  "dependencies": {
+    "sass": "^1.19.0"
+  }
+}
