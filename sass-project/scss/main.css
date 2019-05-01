@@ -1,0 +1,59 @@
+a {
+  font-style: italic;
+  text-decoration: none;
+}
+
+body {
+  font-family: sans-serif;
+  color: grey;
+}
+
+h1, h2, h3, h4 {
+  font-family: Georgia;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+p {
+  font-family: Verdana, arial, sans-serif;
+}
+
+.warning-button {
+  background-color: orange;
+  color: white;
+  padding: 8px 12px;
+}
+
+a {
+  color: #00b7ff;
+}
+
+#header {
+  border-radius: 6px;
+  border: 1px solid grey;
+  height: 60px;
+  background: blue;
+}
+
+#header #main-menu a {
+  color: white;
+}
+
+#header #main-menu li {
+  display: inline;
+}
+
+#main {
+  width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#footer {
+  height: 90px;
+  background: blue;
+}
+/*# sourceMappingURL=main.css.map */

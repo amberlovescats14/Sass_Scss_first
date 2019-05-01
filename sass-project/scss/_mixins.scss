@@ -1,0 +1,29 @@
+@mixin warning {
+  background-color: orange;
+  color: white;
+}
+
+@mixin large-text {
+  font: {
+    size: 22px;
+    weight: 800;
+  }
+
+}
+
+@mixin rounded {
+  border-radius: 6px;
+}
+// nested mixin
+@mixin box {
+  @include rounded();
+  border: 1px solid grey;
+
+}
+// root mixin
+@mixin fancy-link {
+  a {
+    font-style: italic;
+    text-decoration: none;
+  }
+}

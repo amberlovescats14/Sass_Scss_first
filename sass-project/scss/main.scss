@@ -1,23 +1,44 @@
+@import '../scss/_variables';
+
+@import 'mixins';
+
+// implemented on the root
+@include fancy-link();
+////
 body {
   font-family: sans-serif;
+  color: $text-color;
 }
 
 h1, h2, h3, h4 {
-  
+  font-family: $headline-font;
+}
+h2 {
+  @include large-text()
 }
 
 p {
-  
+  font-family: $text-font;
 }
-
+.warning-button {
+  @include warning();
+  padding: 8px 12px;
+}
 a {
-
+color: $link-color;
 }
 
 #header {
-
+  @include box();
+  height: $header-height;
+  background: $theme-color;
   #main-menu {
-
+    a {
+      color: $menu-item-color;
+    }
+    li {
+      display: inline;
+    }
   }
   
   #logo {
@@ -26,7 +47,9 @@ a {
 }
 
 #main {
-
+  width: $content-width;
+  margin-right: auto;
+  margin-left: auto;
   #content {
   }
 
@@ -35,5 +58,6 @@ a {
 }
 
 #footer {
-
+  height: $footer-height;
+  background: $theme-color
 }
