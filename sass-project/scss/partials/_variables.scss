@@ -6,9 +6,10 @@ $ternary-color: green;
 $link-color: $secondary-color;
 $menu-item-color: white;
 //font section
-$text-font: Verdana, arial, sans-serif;
-$headline-font: Georgia;
+$text-font: "Roboto Condensed", Arial, sans-serif;
+$headline-font: "Titillium Web", Georgia, serif;
 // sizes section
 $content-width: 960px;
 $footer-height: 90px;
 $header-height: 60px;
+$col: col-width($columns: 8);

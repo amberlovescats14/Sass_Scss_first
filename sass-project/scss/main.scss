@@ -1,13 +1,26 @@
-@import '../scss/_variables';
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/functions';
 
-@import '../scss/_mixins';
+
+
+@include google-font("Roboto+Condensed");
+@include google-font("Titillium+Web");
+
 
 // implemented on the root
 @include fancy-link();
 ////
+
+@include large-screens {
+  font-size: 125%;
+}
 body {
   font-family: sans-serif;
-  color: $text-color;
+  color: rgb(10, 15, 50);
+  background-color: hsl(60, 50%, 100%);
+  font-size: em(18px);
+
 }
 
 h1, h2, h3, h4 {
@@ -25,18 +38,32 @@ p {
   padding: 8px 12px;
 }
 a {
-color: $link-color;
+color: green;
 }
-
+@include apply-to-ie-6{
+  body {
+    font-size: 125%;
+  }
+};
 #header {
-  @include box($border: 3px solid green);
+  @include box($border:1px solid green, $radius: 12px);
   height: $header-height;
   background: $theme-color;
-  color: green;
+  @include box-shadow(2px 0px 4px rgba(0, 128, 128, 0.144), 1px 1px 6px $secondary-color);
+  // font-family: $text-font;
 
   #main-menu {
     a {
       color: $menu-item-color;
+      padding: 6px 8px;
+      border-bottom: 1px solid transparentize(#fefefe, 1);
+      transition: border-bottom 1s;
+      transition-timing-function: ease-in-out;
+
+      &:hover {
+        color: darken($link-color, 50%);
+        border-bottom: 1px solid opacify(#fefefe, 1.5);
+      }
     }
     li {
       display: inline;
@@ -50,12 +77,20 @@ color: $link-color;
 
 #main {
   width: $content-width;
+  @include large-screens {
+    width: auto;
+    max-width: $content-width;
+  }
   margin-right: auto;
   margin-left: auto;
   #content {
+    float: left;
+    width: 6*$col;
   }
 
   #sidebar {
+    float: right;
+    width: 2*$col;
   }
 }
 

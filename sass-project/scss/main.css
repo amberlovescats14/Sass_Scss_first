@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
 a {
   font-style: italic;
   text-decoration: none;
@@ -5,11 +7,18 @@ a {
 
 body {
   font-family: sans-serif;
-  color: grey;
+  color: #0a0f32;
+  background-color: white;
+}
+
+@media only screen and (max-width: 960px) {
+  body {
+    font-size: 125%;
+  }
 }
 
 h1, h2, h3, h4 {
-  font-family: Georgia;
+  font-family: "Titillium Web", Georgia, serif;
 }
 
 h2 {
@@ -18,7 +27,7 @@ h2 {
 }
 
 p {
-  font-family: Verdana, arial, sans-serif;
+  font-family: "Roboto Condensed", Arial, sans-serif;
 }
 
 .warning-button {
@@ -27,19 +36,40 @@ p {
   padding: 8px 12px;
 }
 
+.warning-button:hover {
+  background-color: #ffc04d;
+}
+
 a {
   color: #00b7ff;
 }
 
+* html body {
+  font-size: 125%;
+}
+
 #header {
-  border-radius: 8px;
-  border: 1px solid grey;
+  border-radius: 12px;
+  border: 1px solid green;
   height: 60px;
   background: blue;
+  -webkit-box-shadow: 2px 0px 4px rgba(0, 128, 128, 0.144), 1px 1px 6px #00b7ff;
+          box-shadow: 2px 0px 4px rgba(0, 128, 128, 0.144), 1px 1px 6px #00b7ff;
 }
 
 #header #main-menu a {
   color: white;
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(254, 254, 254, 0);
+  -webkit-transition: border-bottom 1s;
+  transition: border-bottom 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+#header #main-menu a:hover {
+  color: black;
+  border-bottom: 1px solid #fefefe;
 }
 
 #header #main-menu li {
@@ -50,6 +80,13 @@ a {
   width: 960px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media only screen and (max-width: 960px) {
+  #main {
+    width: auto;
+    max-width: 960px;
+  }
 }
 
 #footer {

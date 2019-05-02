@@ -1,0 +1,71 @@
+@mixin tiny-screens() {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin small-screens() {
+  @media only screen and (max-width: 420px) {
+    @content;
+  }
+}
+@mixin medium-screens() {
+  @media only screen and (max-width: 680px) {
+    @content;
+  }
+}
+@mixin large-screens() {
+  @media only screen and (max-width: 960px) {
+    @content;
+  }
+}
+
+
+@mixin google-font($font) {
+  $font: unquote($font);
+  @import url(https://fonts.googleapis.com/css?family=#{$font});
+}
+@mixin warning {
+  background-color: orange;
+  color: white;
+
+  &:hover {
+    background-color: lighten(orange, 15%)
+  }
+}
+
+@mixin large-text {
+  font: {
+    size: 22px;
+    weight: 800;
+  }
+
+}
+
+@mixin rounded($radius: 6px) {
+  border-radius: $radius;
+}
+// nested mixin
+@mixin box($radius, $border: 1px solid black) {
+  @include rounded($radius);
+  border: $border;
+
+}
+// root mixin
+@mixin fancy-link {
+  a {
+    font-style: italic;
+    text-decoration: none;
+  }
+}
+//can specifify multiple shadows with ...
+@mixin box-shadow($shadows...) {
+  box-shadow: $shadows;
+  
+}
+// add content
+@mixin apply-to-ie-6 {
+  * html {
+    @content;
+  }
+}
