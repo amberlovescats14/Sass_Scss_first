@@ -1,6 +1,6 @@
 @import '../scss/_variables';
 
-@import 'mixins';
+@import '../scss/_mixins';
 
 // implemented on the root
 @include fancy-link();
@@ -29,9 +29,11 @@ color: $link-color;
 }
 
 #header {
-  @include box();
+  @include box($border: 3px solid green);
   height: $header-height;
   background: $theme-color;
+  color: green;
+
   #main-menu {
     a {
       color: $menu-item-color;

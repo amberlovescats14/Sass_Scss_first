@@ -11,13 +11,13 @@
 
 }
 
-@mixin rounded {
-  border-radius: 6px;
+@mixin rounded($radius: 6px) {
+  border-radius: $radius;
 }
 // nested mixin
-@mixin box {
-  @include rounded();
-  border: 1px solid grey;
+@mixin box($radius, $border: 1px solid black) {
+  @include rounded(8px);
+  border: $border;
 
 }
 // root mixin
