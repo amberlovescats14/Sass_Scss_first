@@ -1,6 +1,6 @@
+@import 'partials/functions';
 @import 'partials/variables';
 @import 'partials/mixins';
-@import 'partials/functions';
 
 
 
@@ -17,9 +17,14 @@
 }
 body {
   font-family: sans-serif;
+  font-weight: 800;
   color: rgb(10, 15, 50);
   background-color: hsl(60, 50%, 100%);
   font-size: em(18px);
+  @include large-screens {
+    font-size: 125%;
+  }
+  
 
 }
 
@@ -28,6 +33,7 @@ h1, h2, h3, h4 {
 }
 h2 {
   @include large-text()
+  
 }
 
 p {
@@ -38,7 +44,7 @@ p {
   padding: 8px 12px;
 }
 a {
-color: green;
+color: $link-color;
 }
 @include apply-to-ie-6{
   body {
@@ -85,12 +91,20 @@ color: green;
   margin-left: auto;
   #content {
     float: left;
-    width: 6*$col;
+    width:( 6 * $col);
   }
 
   #sidebar {
     float: right;
-    width: 2*$col;
+    width: (2 * $col);
+    li {
+      list-style: none;
+      padding: em(16px) em(20px);
+      border-bottom: 1px dashed #999;
+      &:hover {
+        background-color: #efefef;
+      }
+    }
   }
 }
 
